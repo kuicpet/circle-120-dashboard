@@ -1,17 +1,53 @@
 function startApp() {
-    // Your entire app should not necessarily be coded inside this 
-    // single function (though there's no penalty for that), 
-    // so create and use/call additional functions from here
-  
-    // pls remove the below and make some magic in here!
-    console.log('make magic in here!');
-  
-    const header = document.querySelector('h2');
-    if(header) {
-      header.textContent = 'Tech Dashboard';
-    }
-  };
-  
-  // ======= DO NOT EDIT ============== //
-  export default startApp;
-  // ======= EEND DO NOT EDIT ========= //
+  // Dom Elemnts
+
+
+  // Data -- Students 
+
+  // Data -- Tutors
+
+  // Total Students
+  const getTotalStudents = () => {}
+
+  // Male Students
+  const getTotalMalestudents = () => {}
+
+  // Female Students
+  const getTotalMaleStudents = () => {}
+
+  // Min Age
+  const getMinStudentsAge = () => {}
+
+  // Max Age
+  const getMaxStudentsAge = () => {}
+
+  // Average Age
+  const getAvgStudentAge = () => {}
+
+  // Frontend Students
+  const getTotalFrontendStudents = () => {}
+
+  // Backend students
+  const getTotalBackendStudents = () => {}
+
+  // Cloud Students
+  const getTotalCloudstudents = () => {}
+
+  // Create Table
+  const populateTable = () => {}
+
+  // Filter Table
+  const filterTable = () => {}
+
+  // Sort Table By Name
+  const sortByName = () => {}
+
+  // Sort Table By Age
+  const sortByAge = () => {}
+
+  // Event Handlers
+}
+
+// ======= DO NOT EDIT ============== //
+export default startApp
+// ======= EEND DO NOT EDIT ========= //
