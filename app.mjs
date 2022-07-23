@@ -2,9 +2,8 @@ function startApp() {
   // Dom Elemnts
 
 
-  // Data -- Students 
+  // Data -- Students & Tutors
 
-  // Data -- Tutors
 
   // Total Students
   const getTotalStudents = () => {}
