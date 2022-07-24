@@ -1,12 +1,30 @@
 function startApp() {
   // Dom Elemnts
 
-
   // Data -- Students & Tutors
 
+  // Fetch data
+  const qty = 60
+  const url = `https://fakerapi.it/api/v1/persons?_quantity=${qty}`
+  let studentsArray = []
+  const fetchData = async () => {
+    try {
+      await fetch(url)
+        .then((res) => res.json())
+        .then((data) => studentsArray.push(data.data))
+        return console.log(studentsArray)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
+  fetchData()
   // Total Students
-  const getTotalStudents = () => {}
+  const getTotalStudents = () => {
+    let totalStudents = studentsArray.length
+    return console.log(`Total Number of Students: ${totalStudents}`)
+  }
+  getTotalStudents()
 
   // Male Students
   const getTotalMalestudents = () => {}
