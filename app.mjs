@@ -12,7 +12,7 @@ function startApp() {
       await fetch(url)
         .then((res) => res.json())
         .then((data) => studentsArray.push(data.data))
-        return console.log(studentsArray)
+      return console.log(studentsArray)
     } catch (error) {
       console.log(error)
     }
@@ -20,11 +20,7 @@ function startApp() {
 
   fetchData()
   // Total Students
-  const getTotalStudents = () => {
-    let totalStudents = studentsArray.length
-    return console.log(`Total Number of Students: ${totalStudents}`)
-  }
-  getTotalStudents()
+  const getTotalStudents = () => {}
 
   // Male Students
   const getTotalMalestudents = () => {}
