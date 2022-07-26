@@ -297,7 +297,7 @@ export const data = [
     tracks: 'frontend',
   },
   {
-    id: 33,
+    id: 34,
     firstname: 'mujidat',
     lastname: 'olowa',
     email: 'mujeedaholowa@gmail.com',
@@ -306,7 +306,7 @@ export const data = [
     tracks: 'frontend',
   },
   {
-    id: 34,
+    id: 35,
     firstname: 'destiny',
     lastname: 'obirije',
     email: 'obirijedestiny@gmail.com',
@@ -315,7 +315,7 @@ export const data = [
     tracks: 'frontend',
   },
   {
-    id: 35,
+    id: 36,
     firstname: 'amara',
     lastname: 'egbuna',
     email: 'egbunajoanna16@gmail.com',
