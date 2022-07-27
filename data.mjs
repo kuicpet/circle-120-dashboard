@@ -1,4 +1,5 @@
-export const data = [
+// students
+export const students = [
   {
     id: 1,
     firstname: 'folarin',
@@ -359,4 +360,16 @@ export const data = [
     age: 35,
     tracks: 'frontend',
   },
+]
+
+// Tutors
+export const tutors = [
+  {
+    id: 1,
+    firstname: 'oluwasetemi',
+    lastname: 'ojo',
+    email: 'setemi@altschoolafrica.com',
+    gender: 'male',
+    role: 'frontend instructor'
+  }
 ]

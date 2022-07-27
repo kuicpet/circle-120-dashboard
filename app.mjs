@@ -1,11 +1,11 @@
-import { data } from './data.mjs'
+import { students } from './data.mjs'
 function startApp() {
   // Dom Elemnts
 
   // Data -- Students & Tutors
 
   // Fetch data
-  console.log(data)
+  console.log(students)
   const qty = 60
   const url = `https://fakerapi.it/api/v1/persons?_quantity=${qty}`
   let studentsArray = []
