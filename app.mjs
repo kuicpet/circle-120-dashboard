@@ -1,54 +1,85 @@
-import { students } from './data.mjs'
+import { students, tutors } from './data.mjs'
 function startApp() {
   // Dom Elemnts
 
   // Data -- Students & Tutors
 
-  // Fetch data
-  console.log(students)
-  const qty = 60
-  const url = `https://fakerapi.it/api/v1/persons?_quantity=${qty}`
-  let studentsArray = []
-  const fetchData = async () => {
-    try {
-      await fetch(url)
-        .then((res) => res.json())
-        .then((data) => studentsArray.push(data.data))
-      return console.log(studentsArray)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  fetchData()
   // Total Students
-  const getTotalStudents = () => {}
+  const getTotalStudents = () => {
+    let totalStudents = students.length
+    return totalStudents
+  }
+  getTotalStudents()
 
   // Male Students
-  const getTotalMalestudents = () => {}
+  const getTotalMaleStudents = () => {
+    let males = students.filter((item) => item.gender === 'male')
+    return males.length
+  }
+  getTotalMaleStudents()
 
   // Female Students
-  const getTotalMaleStudents = () => {}
+  const getTotalFemaleStudents = () => {
+    let females = students.filter((item) => item.gender === 'female')
+    return females.length
+  }
+  getTotalFemaleStudents()
 
   // Min Age
-  const getMinStudentsAge = () => {}
+  const getMinStudentsAge = () => {
+    let res = students[0].age
+    for (let i = 0; i < students.length; i++) {
+      res = Math.min(res, students[i].age)
+    }
+    return res
+  }
+  getMinStudentsAge()
 
   // Max Age
-  const getMaxStudentsAge = () => {}
+  const getMaxStudentsAge = () => {
+    let res = students[0].age
+    for (let i = 0; i < students.length; i++) {
+      res = Math.max(res, students[i].age)
+    }
+    return res
+  }
+  getMaxStudentsAge()
 
   // Average Age
-  const getAvgStudentAge = () => {}
+  const getAvgStudentAge = () => {
+    let sum = 0
+    let ave = 0
+    let length = students.length
+    for (let i = 0; i < students.length; i++) {
+      sum += students[i].age
+    }
+    ave = sum / length
+    return ave
+  }
+  getAvgStudentAge()
 
   // Frontend Students
-  const getTotalFrontendStudents = () => {}
+  const getTotalFrontendStudents = () => {
+    let frontend = students.filter((item) => item.tracks === 'frontend')
+    return frontend
+  }
+  getTotalFrontendStudents()
 
   // Backend students
-  const getTotalBackendStudents = () => {}
+  const getTotalBackendStudents = () => {
+    let backend = students.filter((item) => item.tracks === 'backend')
+    return backend
+  }
+  getTotalBackendStudents()
 
   // Cloud Students
-  const getTotalCloudstudents = () => {}
+  const getTotalCloudStudents = () => {
+    let cloud = students.filter((item) => item.tracks === 'cloud')
+    return cloud
+  }
+  getTotalCloudStudents()
 
-  // Create Table
+ // Create Table
   const populateTable = () => {}
 
   // Filter Table
