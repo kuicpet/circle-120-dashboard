@@ -380,5 +380,13 @@ export const tutors = [
     email: 'setemi@altschoolafrica.com',
     gender: 'male',
     role: 'frontend instructor'
+  },
+  {
+    id: 2,
+    firstname: 'olusola',
+    lastname: 'bakare',
+    email: 'gloryproducer@gmail.com',
+    gender: 'male',
+    role: 'cloud'
   }
 ]
