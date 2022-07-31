@@ -369,6 +369,15 @@ export const students = [
     age: 30,
     tracks: 'frontend',
   },
+   {
+    id: 2,
+    firstname: 'olusola',
+    lastname: 'bakare',
+    email: 'gloryproducer@gmail.com',
+    gender: 'male',
+    role: 'cloud'
+  }
+  },
 ]
 
 // Tutors
@@ -381,12 +390,4 @@ export const tutors = [
     gender: 'male',
     role: 'frontend instructor'
   },
-  {
-    id: 2,
-    firstname: 'olusola',
-    lastname: 'bakare',
-    email: 'gloryproducer@gmail.com',
-    gender: 'male',
-    role: 'cloud'
-  }
 ]
