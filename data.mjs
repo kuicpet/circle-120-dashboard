@@ -378,6 +378,15 @@ export const students = [
     age: 25,
     tracks: 'cloud',
   },
+  {
+    id: 43,
+    firstname: 'abba',
+    lastname: 'jibril',
+    email: 'jibrilabbasani@gmail.com',
+    gender: 'male',
+    age: 27,
+    tracks: 'cloud'
+  }
 ]
 
 // Tutors
@@ -390,4 +399,44 @@ export const tutors = [
     gender: 'male',
     role: 'frontend instructor',
   },
+  {
+    id: 2,
+    firstname: 'abubakar',
+    lastname: 'ango',
+    email: 'abubakarsaddiqango@gmail.com',
+    gender: 'male',
+    role: 'cloud instructor',
+  },
+  {
+    id: 3,
+    firstname: 'rukevwe',
+    lastname: 'onuwa',
+    email: '',
+    gender: 'female',
+    role:'associate program manager'
+  },
+  {
+    id: 4,
+    firstname: 'jerry',
+    lastname: 'uke',
+    email: 'jerry@altschoolafrica.com',
+    gender: 'male',
+    role: 'workspace admin'
+  },
+  {
+    id: 5,
+    firstname: 'racheal',
+    lastname: 'onoja',
+    email: 'rachael@altschoolafrica.com',
+    gender: 'female',
+    role: 'director of learning'
+  },
+  {
+    id: 6,
+    firstname:'tabitha',
+    lastname:'kavyu',
+    email: 'tabitha@altschoolafrica.com',
+    gender: 'female',
+    role: 'community manager'
+  }
 ]
