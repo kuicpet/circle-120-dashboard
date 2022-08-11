@@ -8,11 +8,18 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     font-family: sans-serif;
     width: 100%;
     height: auto;
 }
-
+main {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
 /* Header */
 .nav {
     display: flex;
@@ -44,7 +51,6 @@ li {
     margin: 0 0.5rem;
     padding: 0.1rem 1rem;
     border-radius: 50px;
-   
     background-color: rgb(247, 243, 235);;
     color: black;
     font-size: 1.1rem;
@@ -114,16 +120,60 @@ input {
 }
 
 
+
+/** Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    width: 18%;
+    background-color: rgb(5, 25, 45);
+    color: white;
+    height: 100vh;
+}
+.sidebar_items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+}
+.sidebar_items div {
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-size: 14px;
+}
+.sidebar_items div:hover {
+    background-color: rgb(72, 72, 84);
+}
+.sidebar_items svg {
+    padding: 0 0.25rem;
+}
+
+/**Media Queries*/
 @media screen and (max-width: 56.43rem) {
-    .items {
+    .items{
         display: none;
     }
-    
+    .sidebar {
+        width: 10%;
+    }
+    .sidebar span {
+       display: none;
+    }
 }
 
 @media screen and (max-width: 26.43rem) {
-    .search, .notify, .logo {
+    .search, .notify, .logo{
         display: none;
+    }
+    .sidebar {
+        width: 15%;
+    }
+    .sidebar svg {
+        padding: 0;
     }
     .hamburger {
         display: flex;

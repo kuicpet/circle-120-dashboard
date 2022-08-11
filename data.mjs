@@ -421,7 +421,7 @@ export const students = [
     email: 'chechevese@yahoo.com',
     gender: 'female',
     age: 40,
-    tracks: backend,    
+    tracks: 'backend',    
   },
   {
     id: 48,
