@@ -2,30 +2,39 @@
 import { students, tutors } from './data.mjs'
 function startApp() {
   // Dom Elemnts
-  let studentTable = document.getElementById('#table')
+  let studentTable = document.querySelector('#table')
   let input = document.querySelector('#search')
   let tFirstName = document.querySelector('.first_name')
   let tLastName = document.querySelector('.last_name')
   let tAge = document.querySelector('.age')
+  let total = document.querySelector('.total')
+  let total_females = document.querySelector('.females')
+  let total_males = document.querySelector('.males')
+  let total_front = document.querySelector('.front')
+  let total_back = document.querySelector('.back')
+  let total_cloud = document.querySelector('.cloud')
+  let total_devops = document.querySelector('.devops')
 
   // Total Students
   const getTotalStudents = () => {
     let totalStudents = students.length
-    return totalStudents
+    return total.textContent = totalStudents
   }
   getTotalStudents()
 
   // Male Students
   const getTotalMaleStudents = () => {
     let males = students.filter((item) => item.gender === 'male')
-    return males.length
+    let no = males.length
+    return total_males.textContent = no
   }
   getTotalMaleStudents()
 
   // Female Students
   const getTotalFemaleStudents = () => {
     let females = students.filter((item) => item.gender === 'female')
-    return females.length
+    let no = females.length
+    return total_females.textContent = no
   }
   getTotalFemaleStudents()
 
@@ -65,23 +74,34 @@ function startApp() {
   // Frontend Students
   const getTotalFrontendStudents = () => {
     let frontend = students.filter((item) => item.tracks === 'frontend')
-    return frontend
+    let no = frontend.length
+    return total_front.textContent = no
   }
   getTotalFrontendStudents()
 
   // Backend students
   const getTotalBackendStudents = () => {
     let backend = students.filter((item) => item.tracks === 'backend')
-    return backend
+    let no = backend.length
+    return total_back.textContent = no
   }
   getTotalBackendStudents()
 
   // Cloud Students
   const getTotalCloudStudents = () => {
     let cloud = students.filter((item) => item.tracks === 'cloud')
-    return cloud
+    let no = cloud.length
+    return total_cloud.textContent = no
   }
   getTotalCloudStudents()
+  
+  // Cloud Students
+  const getTotaldevOpsStudents = () => {
+    let devops = students.filter((item) => item.tracks === 'devops')
+    let no = devops.length
+    return total_devops.textContent = no
+  }
+  getTotaldevOpsStudents()
 
   // Create Table
   const populateTable = () => {
@@ -89,22 +109,25 @@ function startApp() {
     for (let data of students) {
       let row = studentTable.insertRow(-1)
 
-      let first_name = row.insertCell(0)
+      let sn = row.insertCell(0)
+      sn.innerHTML = data.id
+
+      let first_name = row.insertCell(1)
       first_name.innerHTML = data.firstname
 
-      let last_name = row.insertCell(0)
+      let last_name = row.insertCell(2)
       last_name.innerHTML = data.lastname
 
-      let age = row.insertCell(1)
+      let age = row.insertCell(3)
       age.innerHTML = data.age
 
-      let sex = row.insertCell(2)
-      sex.innerHTML = data.sex
+      let gender = row.insertCell(4)
+      gender.innerHTML = data.gender
 
-      let email = row.insertCell(3)
+      let email = row.insertCell(5)
       email.innerHTML = data.email
 
-      let tracks = row.insertCell(4)
+      let tracks = row.insertCell(6)
       tracks.innerHTML = data.tracks
     }
 

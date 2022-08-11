@@ -28,6 +28,10 @@ main {
     padding: 0.5rem 0;
     border-bottom: 1px solid black;
     height: 2.5rem;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
 }
 
 .logo {
@@ -77,6 +81,7 @@ input {
     margin-left: 0.5rem;
     outline: none;
     border: none;
+    background-color: transparent;
 }
 
 .avatar {
@@ -130,6 +135,8 @@ input {
     background-color: rgb(5, 25, 45);
     color: white;
     height: 100vh;
+    position: fixed;
+    
 }
 .sidebar_items {
     display: flex;
@@ -152,12 +159,19 @@ input {
     padding: 0 0.25rem;
 }
 
+small {
+    text-align: justify;
+    padding: 1rem;
+}
 /**container*/
 .container {
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 0.5rem;
+    background-color:  rgb(247, 243, 235);
+    margin-left: 18%;
+    margin-top: 3.5rem;
 }
 hr {
     border-color: rgb(247, 243, 235);
@@ -204,6 +218,7 @@ hr {
     outline: none;
     border: 1px solid black;
     background-color: transparent;
+    background-color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;cursor: pointer;
 }
@@ -226,6 +241,7 @@ hr {
     padding: 0.25rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;cursor: pointer;
+    background-color: white;
 }
 .reviews button:nth-child(2) span {
     padding-right: 0.25rem;
@@ -238,6 +254,115 @@ hr {
     padding-right: 0.5rem;
 }
 
+/**Stats*/
+.stats {
+    margin: 1rem 0;
+}
+.stats h2 {
+    font-weight: 100;
+    margin: 0 1rem;
+    padding: 0.3rem 0;
+}
+.stats_1, .stats_2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+.stats_1 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/3);
+    height: 4.5rem;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 10px;
+}
+.stats_2 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 2.5rem;
+    background-color: white;
+    margin: 0.5rem;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.stats span:last-child {
+    font-weight: bold;
+    padding: 0 0.25rem;
+}
+.female_gender {
+    background-color: pink;
+    border-radius: 50px;
+    padding: 0.25rem;
+    margin: 0.5rem;
+}
+.male_gender {
+    background-color: lightblue;
+    border-radius: 50px;
+    padding: 0.25rem;
+    margin: 0.5rem;
+}
+
+/**Tables*/
+.table_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1rem 0;
+}
+.tables {
+    margin: 1rem 0;
+    width: 100%;
+}
+table {
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-transform: capitalize;
+}
+thead {
+    color: rgb(63, 61, 61);
+    border-bottom: 1px solid black;
+}
+th {
+    font-weight: 100;
+    width: 5.5rem;
+    padding: 0.5rem;
+    text-align: justify;
+    cursor: pointer;
+}
+th:hover {
+    background-color: black;
+    color: white;
+}
+td {
+    border-bottom: 1px solid black;
+     padding: 0.5rem;
+     text-align: justify;
+    
+ }
+ td:nth-child(1){
+     border-left: 1px solid black;
+ }
+ td:last-child {
+     border-right: 1px solid black;
+ }
+ td:nth-child(6){
+    text-transform: lowercase;
+ }
+ 
+ tr:nth-of-type(even){
+     background-color: lightgray;
+ }
+
 
 /**Media Queries*/
 @media screen and (max-width: 56.43rem) {
@@ -246,6 +371,11 @@ hr {
     }
     .sidebar {
         width: 10%;
+        height: auto;
+    }
+    .container {
+        width: 90%;
+        margin-left: 10%;
     }
     .sidebar span {
        display: none;
@@ -257,6 +387,16 @@ hr {
    .reviews {
     margin: 0 2rem;
    }
+   .stats_1, .stats_2{
+    flex-direction: column;
+   }
+   .stats_1 div {
+    width: 100%;
+    margin: 0.5rem;
+   }
+   .stats_2 div {
+    width: 50%;
+   }
 }
 
 @media screen and (max-width: 26.43rem) {
@@ -264,7 +404,11 @@ hr {
         display: none;
     }
     .sidebar {
-        width: 15%;
+        width: 8%;
+    }
+    .container {
+        width: 85%;
+        margin-left: 15%;
     }
     .sidebar svg {
         padding: 0;
@@ -276,5 +420,10 @@ hr {
     }
     .hero {
         flex-direction: column;
+    }
+    .stats_2 div, .stats_1 div {
+        width: 90%;
+        height: 2.5rem;
+        padding: 0.25rem;
     }
 }
