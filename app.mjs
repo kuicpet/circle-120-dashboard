@@ -18,7 +18,8 @@ function startApp() {
   let min_age = document.querySelector('.min_age')
   let max_age = document.querySelector('.max_age')
   let searchInput = document.querySelector('#search')
-  let searchNav = document.querySelector('#searchInput')
+  let descBtn = document.querySelector('.desc')
+  let ascBtn = document.querySelector('.asc')
   
 
   // Total Students
@@ -172,6 +173,20 @@ function startApp() {
     })
     populateTable()
   }
+  // sort in ascending order
+const ascSort = () => {
+  students.sort((a, b) => {
+    return a.firstname > b.firstname
+  })
+  populateTable()
+}
+// sort in descending order
+ const descSort = () => {
+  students.sort((a, b) => {
+    return a.firstname > b.firstname
+  }).reverse()
+  populateTable()
+ }
 
   // Sort Table By Last Name
   const sortByLastName = () => {
@@ -195,6 +210,15 @@ function startApp() {
     filterTable()
   })
 
+  descBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    descSort()
+  })
+
+  ascBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    ascSort()
+  })
   tFirstName.addEventListener('click', () => {
     sortByFirstName()
   })

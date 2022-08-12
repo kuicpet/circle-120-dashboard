@@ -311,7 +311,34 @@ hr {
     padding: 0.25rem;
     margin: 0.5rem;
 }
-
+/**Sort Btns*/
+.sort_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    margin: 0 1rem;
+}
+.sort_btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 100%;
+    margin: 0 0.25rem;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: green;
+    color: white;
+    transition: all 0.2s ease-in-out;cursor: pointer;
+}
+.sort_btns button:hover {
+    background-color: black;
+}
+.sort_btns button:focus {
+    background-color: black;
+}
 /**Tables*/
 .table_container {
     display: flex;
@@ -336,8 +363,6 @@ thead {
     color: rgb(63, 61, 61);
     border-bottom: 1px solid black;
 }
-
-
 th {
     font-weight: 100;
     width: 5.5rem;
@@ -445,9 +470,10 @@ td {
  th span svg {
     display: none;
  }
- th span {
+ th span:nth-child(2){
     padding: 0;
  }
+ 
 }
 
 @media screen and (max-width: 26.43rem) {
