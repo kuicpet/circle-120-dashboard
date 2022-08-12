@@ -219,7 +219,9 @@ const ascSort = () => {
     e.preventDefault()
     ascSort()
   })
-  tFirstName.addEventListener('click', () => {
+  
+  tFirstName.addEventListener('click', (e) => {
+    e.preventDefault()
     sortByFirstName()
   })
 

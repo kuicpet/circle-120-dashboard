@@ -473,7 +473,11 @@ td {
  th span:nth-child(2){
     padding: 0;
  }
- 
+ .sort_btns {
+    width: 50%;
+    margin: 0.5rem 0;
+    justify-content: center;
+ }
 }
 
 @media screen and (max-width: 26.43rem) {
@@ -520,5 +524,8 @@ td {
     }
     th span {
         padding: 0;
+    }
+    .sort_btns {
+        width: 90%;
     }
 }
