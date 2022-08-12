@@ -17,6 +17,9 @@ function startApp() {
   let average_age = document.querySelector('.average_age')
   let min_age = document.querySelector('.min_age')
   let max_age = document.querySelector('.max_age')
+  let searchInput = document.querySelector('#search')
+  let searchNav = document.querySelector('#searchInput')
+  
 
   // Total Students
   const getTotalStudents = () => {
@@ -165,7 +168,7 @@ function startApp() {
   // Sort Table By First Name
   const sortByFirstName = () => {
     students.sort((a, b) => {
-      return a.firstname - b.firstname
+      return a.firstname > b.firstname
     })
     populateTable()
   }
@@ -173,7 +176,7 @@ function startApp() {
   // Sort Table By Last Name
   const sortByLastName = () => {
     students.sort((a, b) => {
-      return a.lastname - b.lastname
+      return a.lastname > b.lastname
     })
     populateTable()
   }
@@ -187,7 +190,8 @@ function startApp() {
   }
 
   // Event handlers
-  input.addEventListener('keyup', (e) => {
+  searchInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
     filterTable()
   })
 

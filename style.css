@@ -65,7 +65,7 @@ li:hover {
     background-color: black;
     color: white;
 }
-.search, .search_tables {
+.search_tables, .search {
     position: relative;
     display: flex;
     align-items: center;
@@ -136,7 +136,7 @@ input {
     color: white;
     height: 100vh;
     position: fixed;
-    
+    margin-top: 1rem;
 }
 .sidebar_items {
     display: flex;
@@ -336,10 +336,13 @@ thead {
     color: rgb(63, 61, 61);
     border-bottom: 1px solid black;
 }
+
+
 th {
     font-weight: 100;
     width: 5.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
+    margin: 0 0.5rem;
     text-align: justify;
     cursor: pointer;
 }
@@ -347,12 +350,22 @@ th:hover {
     background-color: black;
     color: white;
 }
+th:nth-child(1){
+    width: 1rem;
+}
+th span {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: justify;
+    padding: 0 0.5rem;
+}
 td {
     border-bottom: 1px solid black;
      padding: 0.5rem;
-     text-align: justify;
-    
+     text-align: justify;   
  }
+ 
  td:nth-child(1){
      border-left: 1px solid black;
  }
@@ -386,6 +399,7 @@ td {
     border-radius: 50px;
     background-color: wheat;
 }
+
 /**Media Queries*/
 @media screen and (max-width: 56.43rem) {
     .items{
@@ -425,6 +439,15 @@ td {
    .wrapper_items {
     margin: 1rem 0;
    }
+   .tables {
+    overflow-x: scroll;
+ }
+ th span svg {
+    display: none;
+ }
+ th span {
+    padding: 0;
+ }
 }
 
 @media screen and (max-width: 26.43rem) {
@@ -468,5 +491,8 @@ td {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    th span {
+        padding: 0;
     }
 }
