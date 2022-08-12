@@ -65,7 +65,7 @@ li:hover {
     background-color: black;
     color: white;
 }
-.search {
+.search, .search_tables {
     position: relative;
     display: flex;
     align-items: center;
@@ -291,6 +291,10 @@ hr {
     border: 1px solid black;
     border-radius: 50px;
 }
+.feather {
+    margin: 0 0.5rem;
+    color: blue;
+}
 .stats span:last-child {
     font-weight: bold;
     padding: 0 0.25rem;
@@ -362,8 +366,26 @@ td {
  tr:nth-of-type(even){
      background-color: lightgray;
  }
-
-
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+.wrapper_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+}
+.wrapper_items div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    margin: 0 1rem;
+    padding: 0 0.75rem;
+    border-radius: 50px;
+    background-color: wheat;
+}
 /**Media Queries*/
 @media screen and (max-width: 56.43rem) {
     .items{
@@ -371,7 +393,7 @@ td {
     }
     .sidebar {
         width: 10%;
-        height: auto;
+        height: 100%;
     }
     .container {
         width: 90%;
@@ -397,6 +419,12 @@ td {
    .stats_2 div {
     width: 50%;
    }
+   .wrapper {
+    flex-direction: column;
+   }
+   .wrapper_items {
+    margin: 1rem 0;
+   }
 }
 
 @media screen and (max-width: 26.43rem) {
@@ -404,11 +432,15 @@ td {
         display: none;
     }
     .sidebar {
-        width: 8%;
+        width: 10%;
+        margin-top: 1rem;
+    }
+    .sidebar div {
+        padding: 0.1rem;
     }
     .container {
         width: 85%;
-        margin-left: 15%;
+        margin-left: 10%;
     }
     .sidebar svg {
         padding: 0;
@@ -425,5 +457,16 @@ td {
         width: 90%;
         height: 2.5rem;
         padding: 0.25rem;
+    }
+    .wrapper_items {
+       display: none;
+    }
+    .tables {
+       overflow-x: scroll;
+    }
+    small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

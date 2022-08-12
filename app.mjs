@@ -14,6 +14,9 @@ function startApp() {
   let total_back = document.querySelector('.back')
   let total_cloud = document.querySelector('.cloud')
   let total_devops = document.querySelector('.devops')
+  let average_age = document.querySelector('.average_age')
+  let min_age = document.querySelector('.min_age')
+  let max_age = document.querySelector('.max_age')
 
   // Total Students
   const getTotalStudents = () => {
@@ -44,7 +47,7 @@ function startApp() {
     for (let i = 0; i < students.length; i++) {
       res = Math.min(res, students[i].age)
     }
-    return res
+    return min_age.textContent = res
   }
   getMinStudentsAge()
 
@@ -54,7 +57,7 @@ function startApp() {
     for (let i = 0; i < students.length; i++) {
       res = Math.max(res, students[i].age)
     }
-    return res
+    return max_age.textContent = res
   }
   getMaxStudentsAge()
 
@@ -67,7 +70,7 @@ function startApp() {
       sum += students[i].age
     }
     ave = sum / length
-    return ave
+    return average_age.textContent = Math.trunc(ave)
   }
   getAvgStudentAge()
 
