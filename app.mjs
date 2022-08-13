@@ -19,7 +19,7 @@ function startApp() {
   let max_age = document.querySelector('.max_age')
   let searchInput = document.querySelector('#search')
   let descBtn = document.querySelector('.desc')
-  let ascBtn = document.querySelector('.asc')
+  let ascBtn = document.getElementById('asc')
   
 
   // Total Students
