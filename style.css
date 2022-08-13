@@ -488,6 +488,9 @@ td {
     margin: 0.5rem 0;
     justify-content: center;
  }
+ .active {
+    background: none;
+ }
 }
 
 @media screen and (max-width: 26.43rem) {
@@ -541,4 +544,7 @@ td {
     .sort_btns {
         width: 90%;
     }
+    .active {
+        background: none;
+     }
 }
