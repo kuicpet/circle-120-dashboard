@@ -99,6 +99,13 @@ input {
     height: 2rem;
     margin: 0 1rem;
     border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.avatar:focus {
+    outline: none;
+    border: none;
 }
 .notify:hover {
     background-color: rgb(176, 174, 174);
@@ -123,9 +130,61 @@ input {
     cursor: pointer;
     border: none;
 }
-
-
-
+.user {
+    display: flex;
+    position: relative;
+}
+.modal, .notifications {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 5px;
+    background-color: white;
+    z-index: 1000;
+    width: 10rem;
+    height: 5rem;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    border-radius: 6px;
+}
+.notifications p {
+    font-size: 0.85rem;
+    margin: 1rem 0;
+}
+.notifications a {
+    font-size: 0.85rem;
+}
+.modal div {
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;cursor: pointer;
+}
+.modal a, .notifications a {
+    color:gray;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.modal a:hover, .notifications a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+.modal button {
+    width: 8rem;
+    height: 1.75rem;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.modal button:hover {
+    background-color: red;
+}
+.show {
+    display: flex;
+}
 /** Sidebar */
 .sidebar {
     display: flex;

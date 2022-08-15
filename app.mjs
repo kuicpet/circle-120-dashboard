@@ -20,12 +20,15 @@ function startApp() {
   let searchInput = document.querySelector('#search')
   let descBtn = document.getElementById('desc')
   let ascBtn = document.getElementById('asc')
-  
+  let logoutBtn = document.querySelector('.avatar')
+  let logoutModal = document.querySelector('.modal')
+  let notificationBtn = document.querySelector('.notify')
+  let notificationModal = document.querySelector('.notifications')
 
   // Total Students
   const getTotalStudents = () => {
     let totalStudents = students.length
-    return total.textContent = totalStudents
+    return (total.textContent = totalStudents)
   }
   getTotalStudents()
 
@@ -33,7 +36,7 @@ function startApp() {
   const getTotalMaleStudents = () => {
     let males = students.filter((item) => item.gender === 'male')
     let no = males.length
-    return total_males.textContent = no
+    return (total_males.textContent = no)
   }
   getTotalMaleStudents()
 
@@ -41,7 +44,7 @@ function startApp() {
   const getTotalFemaleStudents = () => {
     let females = students.filter((item) => item.gender === 'female')
     let no = females.length
-    return total_females.textContent = no
+    return (total_females.textContent = no)
   }
   getTotalFemaleStudents()
 
@@ -51,7 +54,7 @@ function startApp() {
     for (let i = 0; i < students.length; i++) {
       res = Math.min(res, students[i].age)
     }
-    return min_age.textContent = res
+    return (min_age.textContent = res)
   }
   getMinStudentsAge()
 
@@ -61,7 +64,7 @@ function startApp() {
     for (let i = 0; i < students.length; i++) {
       res = Math.max(res, students[i].age)
     }
-    return max_age.textContent = res
+    return (max_age.textContent = res)
   }
   getMaxStudentsAge()
 
@@ -74,7 +77,7 @@ function startApp() {
       sum += students[i].age
     }
     ave = sum / length
-    return average_age.textContent = Math.trunc(ave)
+    return (average_age.textContent = Math.trunc(ave))
   }
   getAvgStudentAge()
 
@@ -82,7 +85,7 @@ function startApp() {
   const getTotalFrontendStudents = () => {
     let frontend = students.filter((item) => item.tracks === 'frontend')
     let no = frontend.length
-    return total_front.textContent = no
+    return (total_front.textContent = no)
   }
   getTotalFrontendStudents()
 
@@ -90,7 +93,7 @@ function startApp() {
   const getTotalBackendStudents = () => {
     let backend = students.filter((item) => item.tracks === 'backend')
     let no = backend.length
-    return total_back.textContent = no
+    return (total_back.textContent = no)
   }
   getTotalBackendStudents()
 
@@ -98,15 +101,15 @@ function startApp() {
   const getTotalCloudStudents = () => {
     let cloud = students.filter((item) => item.tracks === 'cloud')
     let no = cloud.length
-    return total_cloud.textContent = no
+    return (total_cloud.textContent = no)
   }
   getTotalCloudStudents()
-  
+
   // Cloud Students
   const getTotaldevOpsStudents = () => {
     let devops = students.filter((item) => item.tracks === 'devops')
     let no = devops.length
-    return total_devops.textContent = no
+    return (total_devops.textContent = no)
   }
   getTotaldevOpsStudents()
 
@@ -174,19 +177,21 @@ function startApp() {
     populateTable()
   }
   // sort in ascending order
-const ascSort = () => {
-  students.sort((a, b) => {
-    return a.firstname > b.firstname
-  })
-  populateTable()
-}
-// sort in descending order
- const descSort = () => {
-  students.sort((a, b) => {
-    return a.firstname > b.firstname
-  }).reverse()
-  populateTable()
- }
+  const ascSort = () => {
+    students.sort((a, b) => {
+      return a.firstname > b.firstname
+    })
+    populateTable()
+  }
+  // sort in descending order
+  const descSort = () => {
+    students
+      .sort((a, b) => {
+        return a.firstname > b.firstname
+      })
+      .reverse()
+    populateTable()
+  }
 
   // Sort Table By Last Name
   const sortByLastName = () => {
@@ -219,7 +224,7 @@ const ascSort = () => {
     e.preventDefault()
     ascSort()
   })
-  
+
   tFirstName.addEventListener('click', (e) => {
     e.preventDefault()
     sortByFirstName()
@@ -231,6 +236,33 @@ const ascSort = () => {
 
   tAge.addEventListener('click', () => {
     sortByAge()
+  })
+
+  const toggle = () => {
+    if (logoutBtn.value === 'OFF') {
+      logoutBtn.value = 'ON'
+      logoutModal.classList.add('show')
+    } else if(logoutBtn.value === 'ON'){
+      logoutBtn.value = "OFF"
+      logoutModal.classList.remove('show')
+    }
+  }
+  const toggleNotis = () => {
+    if (notificationBtn.value === 'OFF') {
+      notificationBtn.value = 'ON'
+      notificationModal.classList.add('show')
+    } else if(notificationBtn.value === 'ON'){
+      notificationBtn.value = "OFF"
+      notificationModal.classList.remove('show')
+    }
+  }
+  logoutBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    toggle()
+  })
+  notificationBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    toggleNotis()
   })
 }
 
