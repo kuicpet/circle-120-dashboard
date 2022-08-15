@@ -1,5 +1,5 @@
 // Data -- Students & Tutors
-import { students, tutors } from './data.mjs'
+import { students } from './data.mjs'
 function startApp() {
   // Dom Elemnts
   let studentTable = document.querySelector('#table')
@@ -18,7 +18,7 @@ function startApp() {
   let min_age = document.querySelector('.min_age')
   let max_age = document.querySelector('.max_age')
   let searchInput = document.querySelector('#search')
-  let descBtn = document.querySelector('.desc')
+  let descBtn = document.getElementById('desc')
   let ascBtn = document.getElementById('asc')
   
 
